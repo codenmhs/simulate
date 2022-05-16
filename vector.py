@@ -13,7 +13,7 @@ class Vector():
     def mult(self, scalar):
         output = Vector([0] * len(self.position))
         for i in range(len(output.position)):
-            output.position[i] = self.position[i] * scalar
+            output.position[i] = self.position[i] * scalar * 2
         return output
 
     def difference(self, other):
