@@ -36,7 +36,7 @@ class KnownOutput(unittest.TestCase):
     def test_known_differences(self):
         for (vec1, vec2, answer) in self.known_differences:
             output = Vector(vec1).difference(Vector(vec2))
-            self.assertEqual(output.coords, answer)
+            self.assertEqual(output.position, answer)
 
     def test_known_lengths(self):
         for (vec, answer) in self.known_lengths:
@@ -46,12 +46,12 @@ class KnownOutput(unittest.TestCase):
     def test_known_additions(self):
         for (vec1, vec2, answer) in self.known_additions:
             output = Vector(vec1) + Vector(vec2)
-            self.assertEqual(output.coords, answer)
+            self.assertEqual(output.position, answer)
 
     def test_known_mults(self):
         for (vec1, scalar, answer) in self.known_mults:
             output = Vector(vec1).mult(scalar)
-            self.assertEqual(output.coords, answer)
+            self.assertEqual(output.position, answer)
 
     def test_mismatch_add(self):
         vec1, vec2 = Vector([1, 2, 3]), Vector([1, 2])
