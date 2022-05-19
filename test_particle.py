@@ -24,23 +24,12 @@ class KnownOutput(unittest.TestCase):
         self.assertTrue(self.part1.velocity == self.known_velocities['part1'])
         self.assertTrue(self.part2.velocity == self.known_velocities['part2'])
 
-        #
-        # self.assertTrue(np.allclose(
-        #     np.array(self.part1.velocity.position), np.array(self.known_velocities[0])))
-        # self.assertTrue(np.allclose(
-        #     np.array(self.part2.velocity.position), np.array(self.known_velocities[1])))
-
     def test_increment(self):
         self.part1.increment(10)
         self.part2.increment(10)
 
         self.assertTrue(self.part1 == self.known_positions['part1'])
         self.assertTrue(self.part2 == self.known_positions['part2'])
-
-        # self.assertEqual(
-        #     (self.part1.position, self.part2.position),
-        #     self.known_positions
-        # )
 
 
 if __name__ == '__main__':
